@@ -88,7 +88,7 @@ def lambda_handler(event, context):
     return {
         'statusCode': 200,
         'body': f'Successfully processed {key} from {bucket}'
-    }
+    } ```
 # Lambda Trigger for RDS Setup
 
 This guide will help you set up an AWS Lambda function that is triggered by an S3 bucket upload and updates an RDS database accordingly.
