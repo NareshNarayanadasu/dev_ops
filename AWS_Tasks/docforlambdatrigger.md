@@ -81,3 +81,29 @@ def lambda_handler(event, context):
         'statusCode': 200,
         'body': json.dumps('CSV file processed successfully')
     }
+
+
+
+
+
+
+
+## Step 7: Set Environment Variables for Lambda
+
+1. Go to the Lambda function's configuration.
+2. Under "Environment variables," set the following variables:
+   - RDS_HOST = db-lambda-trigger.cluster-cf8mso6wgybr.us-east-1.rds.amazonaws.com
+   - RDS_USERNAME = admin
+   - RDS_PASSWORD = admin123
+   - RDS_DB_NAME = <your-database-name>
+
+## Step 8: Test the Setup
+
+1. Upload a CSV file to the S3 bucket:
+   - Use the S3 bucket named `lambda-trigger-for-rds`.
+   - Ensure the CSV file is in the correct format for processing.
+   
+2. Check the Lambda function logs:
+   - Go to the AWS Lambda console.
+   - Navigate to your Lambda function.
+   - Check the logs in Amazon CloudWatch to ensure the function is triggered and processing the file.
